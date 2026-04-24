@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar - Screenshots</title>
+    <meta name="description" content="Screenshots of Stellar Download Manager.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+<nav>
+    <div class="nav-inner">
+        <a class="nav-logo" href="index.html#top">
+            <span class="nav-logo-mark" aria-hidden="true">
+                <img class="nav-logo-static" src="images/milky-way.png" alt="">
+                <img class="nav-logo-animated" src="images/milky-way.gif" alt="">
+            </span>
+            <span class="nav-logo-text">Stellar</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html#downloads">Downloads</a></li>
+            <li><a href="screenshots.html">Screenshots</a></li>
+            <li><a href="https://github.com/Ninka-Rex/Stellar">GitHub</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="page-hero">
+    <div class="page-hero-inner">
+        <h1>Screenshots</h1>
+        <p>
+            Browse the current Stellar UI gallery.
+        </p>
+    </div>
+</section>
+
+<section class="gallery-section">
+    <div class="gallery-viewer">
+        <button class="gallery-nav" id="gallery-prev" type="button" aria-label="Previous screenshot">
+            &#8592;
+        </button>
+        <figure class="gallery-stage">
+            <img id="gallery-image" src="screenshots/grabber.png" alt="Stellar screenshot">
+        </figure>
+        <button class="gallery-nav" id="gallery-next" type="button" aria-label="Next screenshot">
+            &#8594;
+        </button>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-inner">
+        <span>Stellar Download Manager | GPL-3.0 | by Ninka_</span>
+        <span>
+            <a href="https://github.com/Ninka-Rex/Stellar">GitHub</a>
+            &nbsp;|&nbsp;
+            <a href="https://github.com/Ninka-Rex/Stellar/issues">Issues</a>
+            &nbsp;|&nbsp;
+            <a href="https://github.com/Ninka-Rex/Stellar/releases">Releases</a>
+        </span>
+    </div>
+</footer>
+
+<script>
+const screenshots = [
+    "grabber.png",
+    "magnet.png",
+    "main-window.png",
+    "new_download.png",
+    "piece map.png",
+    "progress-dialog.png",
+    "scheduler.png",
+    "search.png",
+    "ui.png",
+    "video-picker.png"
+];
+
+let currentScreenshot = 0;
+
+const galleryImage = document.getElementById("gallery-image");
+const galleryPrev = document.getElementById("gallery-prev");
+const galleryNext = document.getElementById("gallery-next");
+
+function renderScreenshot() {
+    const fileName = screenshots[currentScreenshot];
+    galleryImage.src = `screenshots/${fileName}`;
+    galleryImage.alt = `Stellar screenshot: ${fileName}`;
+}
+
+galleryPrev.addEventListener("click", () => {
+    currentScreenshot = (currentScreenshot - 1 + screenshots.length) % screenshots.length;
+    renderScreenshot();
+});
+
+galleryNext.addEventListener("click", () => {
+    currentScreenshot = (currentScreenshot + 1) % screenshots.length;
+    renderScreenshot();
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+        galleryPrev.click();
+    }
+    if (event.key === "ArrowRight") {
+        galleryNext.click();
+    }
+});
+
+renderScreenshot();
+</script>
+</body>
+</html>

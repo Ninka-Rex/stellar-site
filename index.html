@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar - Download Manager</title>
+    <meta name="description" content="Stellar is a download manager for Windows and Linux. It has a robust download engine, torrent support, and downloads from sites like YouTube and Twitter.">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body id="top">
+<nav>
+    <div class="nav-inner">
+        <a class="nav-logo" href="#top">
+            <span class="nav-logo-mark" aria-hidden="true">
+                <img class="nav-logo-static" src="images/milky-way.png" alt="">
+                <img class="nav-logo-animated" src="images/milky-way.gif" alt="">
+            </span>
+            <span class="nav-logo-text">Stellar</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#downloads">Downloads</a></li>
+            <li><a href="screenshots.html">Screenshots</a></li>
+            <li><a href="https://github.com/Ninka-Rex/Stellar">GitHub</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Finally, a <em>stellar</em> download manager!</h1>
+    <p class="tagline">
+        Stellar is a download manager for Windows and Linux. It has a powerful
+        download engine built to recover from disruptions, handle large downloads
+        with many connections at once, support torrents, and download from sites
+        like YouTube and Twitter.
+    </p>
+    <div class="hero-actions">
+        <a class="btn btn-primary btn-with-icon" href="#downloads">
+            <span class="btn-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" role="img" focusable="false" aria-hidden="true">
+                    <path d="M1 2.2 7.2 1v6.2H1Zm7.6-1.4L15 0v7.1H8.6ZM1 8.6h6.2V15L1 13.8Zm7.6 0H15v7l-6.4-1.1Z"></path>
+                </svg>
+            </span>
+            <span>&#8595; Download for Windows</span>
+        </a>
+        <a class="btn btn-secondary btn-with-icon" href="https://github.com/Ninka-Rex/Stellar">
+            <span class="btn-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" role="img" focusable="false" aria-hidden="true">
+                    <path d="M8 0C3.6 0 0 3.6 0 8c0 3.5 2.3 6.5 5.4 7.6.4.1.5-.2.5-.4v-1.4c-2.2.5-2.7-1-2.7-1-.4-1-.9-1.2-.9-1.2-.8-.6.1-.6.1-.6.9.1 1.4 1 1.4 1 .8 1.4 2.2 1 2.7.8.1-.6.3-1 .6-1.2-1.8-.2-3.7-.9-3.7-4.1 0-.9.3-1.6.8-2.2-.1-.2-.4-1 .1-2 0 0 .7-.2 2.3.8.7-.2 1.4-.3 2.1-.3s1.4.1 2.1.3c1.6-1 2.3-.8 2.3-.8.5 1 .2 1.8.1 2 .5.6.8 1.3.8 2.2 0 3.2-1.9 3.9-3.7 4.1.3.3.7.9.7 1.8v2.6c0 .2.1.5.5.4C13.7 14.5 16 11.5 16 8c0-4.4-3.6-8-8-8z"></path>
+                </svg>
+            </span>
+            <span>GitHub</span>
+        </a>
+    </div>
+    <p class="hero-meta hero-platforms">
+        Windows 10/11 | Debian .deb | GPL-3.0 |
+        <a href="https://github.com/Ninka-Rex/Stellar/releases/latest">Latest release &rarr;</a>
+    </p>
+</section>
+
+<div class="feature-row">
+    <div class="feature-inner">
+        <div class="feature-text">
+            <h2>Powerful download engine</h2>
+            <p>
+                Built for large downloads and long-running transfers.
+            </p>
+            <p>
+                Stellar keeps multiple connections busy at once, which helps large files finish faster than a single-threaded transfer.
+            </p>
+            <p>
+                If a connection drops, Stellar retries the broken segment instead of starting the whole file over, then recombines everything when the transfer finishes.
+            </p>
+        </div>
+        <div class="feature-img">
+            <img src="screenshots/main-window.png" alt="Stellar main window">
+        </div>
+    </div>
+</div>
+
+<div class="feature-row">
+    <div class="feature-inner flip">
+        <div class="feature-text">
+            <h2>Torrent support</h2>
+            <p>
+                Full torrent tools live in the same app.
+            </p>
+            <p>
+                That means you can manage direct downloads and torrents side by side instead of juggling a second client.
+            </p>
+            <p>
+                Queue torrents, bind traffic to an adapter, ban peers by client or country, and inspect live piece and swarm maps while the transfer runs.
+            </p>
+        </div>
+        <div class="feature-img">
+            <img src="screenshots/progress-dialog.png" alt="Stellar progress dialog">
+        </div>
+    </div>
+</div>
+
+<div class="feature-row">
+    <div class="feature-inner">
+        <div class="feature-text">
+            <h2>Download from sites like YouTube and Twitter</h2>
+            <p>
+                Media downloads stay inside Stellar instead of bouncing through extra tools.
+            </p>
+            <p>
+                Pick formats before the transfer starts, keep the workflow in one place, and save the result with the rest of your downloads.
+            </p>
+            <p>
+                Stellar can also pass cookies through for authenticated, logged-in downloads when a site expects your session context.
+            </p>
+        </div>
+        <div class="feature-img">
+            <img src="screenshots/video-picker.png" alt="Stellar format picker for social site downloads">
+        </div>
+    </div>
+</div>
+
+<div class="feature-row">
+    <div class="feature-inner flip">
+        <div class="feature-text">
+            <h2>Modern, cross platform UI</h2>
+            <p>
+                One interface across desktop platforms.
+            </p>
+            <p>
+                The app stays focused on practical controls instead of burying everything behind extra layers and popovers.
+            </p>
+            <p>
+                Downloads, queues, categories, torrent tools, and media tools all stay together in one window, on both Windows and Linux.
+            </p>
+        </div>
+        <div class="feature-img">
+            <img src="screenshots/ui.png" alt="Modern cross platform UI">
+        </div>
+    </div>
+</div>
+
+<div class="feature-row">
+    <div class="feature-inner">
+        <div class="feature-text">
+            <h2>Built-in torrent search</h2>
+            <p>
+                Search is built into the app.
+            </p>
+            <p>
+                That means you can search, inspect results, and start torrenting without breaking out into a browser first.
+            </p>
+            <p>
+                Stellar uses qBittorrent-compatible Python plugins and keeps results inside the main window so they can go straight into the torrent workflow.
+            </p>
+        </div>
+        <div class="feature-img">
+            <img src="screenshots/search.png" alt="Built in torrent search">
+        </div>
+    </div>
+</div>
+
+<div class="feature-row">
+    <div class="feature-inner flip">
+        <div class="feature-text">
+            <h2>Intercepts browser downloads</h2>
+            <p>
+                Browser handoff stays intact.
+            </p>
+            <p>
+                Stellar catches downloads before the browser takes over, so you do not have to copy links around by hand.
+            </p>
+            <p>
+                It passes the URL, filename, referrer, and cookie context into Stellar, which helps with sites that depend on the original request.
+            </p>
+        </div>
+        <div class="feature-img">
+            <img src="screenshots/new_download.png" alt="Browser download interception">
+        </div>
+    </div>
+</div>
+
+<div class="oss-strip">
+    <div class="oss-strip-inner">
+        <p>
+            <strong>Free and open source.</strong>
+            Licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL v3</a>.
+        </p>
+        <a class="btn btn-secondary" href="https://github.com/Ninka-Rex/Stellar">
+            github.com/Ninka-Rex/Stellar
+        </a>
+    </div>
+</div>
+
+<section class="download-section" id="downloads">
+    <div class="section-container">
+        <h2>Download release</h2>
+        <p class="section-intro">
+            Binaries are pulled from <a href="https://github.com/Ninka-Rex/Stellar/releases/latest">GitHub Releases</a>.
+        </p>
+
+        <table class="download-table">
+            <thead>
+                <tr>
+                    <th>Platform</th>
+                    <th>Package</th>
+                    <th>Notes</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Windows 10 / 11 <span class="tag tag-green">x64</span></td>
+                    <td><code>StellarSetup.exe</code></td>
+                    <td>Installer</td>
+                    <td>
+                        <a class="btn btn-primary btn-with-icon" data-release-link="windows" href="https://github.com/Ninka-Rex/Stellar/releases/latest">
+                            <span class="btn-icon" aria-hidden="true">
+                                <svg viewBox="0 0 16 16" role="img" focusable="false" aria-hidden="true">
+                                    <path d="M1 2.2 7.2 1v6.2H1Zm7.6-1.4L15 0v7.1H8.6ZM1 8.6h6.2V15L1 13.8Zm7.6 0H15v7l-6.4-1.1Z"></path>
+                                </svg>
+                            </span>
+                            Download
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Linux <span class="tag">x64</span></td>
+                    <td><code>Stellar.deb</code></td>
+                    <td>Debian package</td>
+                    <td>
+                        <a class="btn btn-secondary btn-with-icon" data-release-link="linux" href="https://github.com/Ninka-Rex/Stellar/releases/latest">
+                            <span class="btn-icon" aria-hidden="true">
+                                <svg viewBox="0 0 16 16" role="img" focusable="false" aria-hidden="true">
+                                    <path d="M8 0a8 8 0 1 0 8 8A8 8 0 0 0 8 0Zm3.9 4.7c-.2 1.2-1 1.7-1.5 2.5-.4.7-.5 1.7-.2 2.5.2.6.7 1.1 1.2 1.5-.7.6-1.6 1-2.6 1-.9 0-1.7-.3-2.4-.8-.8-.6-1.2-1.6-1.1-2.6.1-1 .7-1.8 1.4-2.4.8-.7 1.9-1 2.9-1 .8 0 1.7.2 2.3.3Z"></path>
+                                </svg>
+                            </span>
+                            Download
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Source</td>
+                    <td><code>.tar.gz</code></td>
+                    <td>Source archive</td>
+                    <td>
+                        <a class="btn btn-secondary" href="https://github.com/Ninka-Rex/Stellar/archive/refs/heads/master.tar.gz">
+                            Source
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-inner">
+        <span>Stellar Download Manager | GPL-3.0 | by Ninka_</span>
+        <span>
+            <a href="https://github.com/Ninka-Rex/Stellar">GitHub</a>
+            &nbsp;|&nbsp;
+            <a href="https://github.com/Ninka-Rex/Stellar/issues">Issues</a>
+            &nbsp;|&nbsp;
+            <a href="https://github.com/Ninka-Rex/Stellar/releases">Releases</a>
+        </span>
+    </div>
+</footer>
+</body>
+</html>
