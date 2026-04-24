@@ -66,14 +66,14 @@
                 Built for large downloads and long-running transfers.
             </p>
             <p>
-                Stellar keeps multiple connections busy at once, which helps large files finish faster than a single-threaded transfer.
+                Stellar breaks files into segments and downloads them in parallel.
             </p>
             <p>
-                If a connection drops, Stellar retries the broken segment instead of starting the whole file over, then recombines everything when the transfer finishes.
+                If one segment stalls or drops, only that segment is retried. The file is rebuilt from the completed parts when the transfer finishes.
             </p>
         </div>
         <div class="feature-img">
-            <img src="screenshots/main-window.png" alt="Stellar main window">
+            <img src="screenshots/http-download.png" alt="Stellar HTTP download window">
         </div>
     </div>
 </div>
@@ -83,17 +83,17 @@
         <div class="feature-text">
             <h2>Torrent support</h2>
             <p>
-                Full torrent tools live in the same app.
+                Stellar is a full-featured torrent client.
             </p>
             <p>
                 That means you can manage direct downloads and torrents side by side instead of juggling a second client.
             </p>
             <p>
-                Queue torrents, bind traffic to an adapter, ban peers by client or country, and inspect live piece and swarm maps while the transfer runs.
+                Queue torrents, ban peers by client or country, and inspect live piece and swarm maps while the transfer runs. You can even bind your VPN to it!
             </p>
         </div>
         <div class="feature-img">
-            <img src="screenshots/progress-dialog.png" alt="Stellar progress dialog">
+            <img id="torrent-feature-image" src="screenshots/torrent-properties.png" alt="Stellar torrent properties">
         </div>
     </div>
 </div>
@@ -103,13 +103,7 @@
         <div class="feature-text">
             <h2>Download from sites like YouTube and Twitter</h2>
             <p>
-                Media downloads stay inside Stellar instead of bouncing through extra tools.
-            </p>
-            <p>
-                Pick formats before the transfer starts, keep the workflow in one place, and save the result with the rest of your downloads.
-            </p>
-            <p>
-                Stellar can also pass cookies through for authenticated, logged-in downloads when a site expects your session context.
+                Choose a format, start the transfer, and the built-in video downloader handles the site-specific work, including cookie forwarding when needed.
             </p>
         </div>
         <div class="feature-img">
@@ -133,7 +127,7 @@
             </p>
         </div>
         <div class="feature-img">
-            <img src="screenshots/ui.png" alt="Modern cross platform UI">
+            <img id="ui-feature-image" src="screenshots/ui.png" alt="Modern cross platform UI">
         </div>
     </div>
 </div>
@@ -146,10 +140,10 @@
                 Search is built into the app.
             </p>
             <p>
-                That means you can search, inspect results, and start torrenting without breaking out into a browser first.
+                You can search, browse, and start torrenting without ever leaving Stellar.
             </p>
             <p>
-                Stellar uses qBittorrent-compatible Python plugins and keeps results inside the main window so they can go straight into the torrent workflow.
+                Supports the same search engine plugins as qBittorrent.
             </p>
         </div>
         <div class="feature-img">
@@ -163,13 +157,7 @@
         <div class="feature-text">
             <h2>Intercepts browser downloads</h2>
             <p>
-                Browser handoff stays intact.
-            </p>
-            <p>
-                Stellar catches downloads before the browser takes over, so you do not have to copy links around by hand.
-            </p>
-            <p>
-                It passes the URL, filename, referrer, and cookie context into Stellar, which helps with sites that depend on the original request.
+                Install the Chrome or Firefox extension to have Stellar catch downloads from the browser, so you don't have to copy links around by hand.
             </p>
         </div>
         <div class="feature-img">

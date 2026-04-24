@@ -58,3 +58,71 @@
 
     loadReleaseAssets();
 })();
+
+(() => {
+    const torrentFeatureImage = document.getElementById("torrent-feature-image");
+    if (torrentFeatureImage) {
+        const torrentImages = [
+            {
+                src: "screenshots/torrent-properties.png",
+                alt: "Stellar torrent properties",
+            },
+            {
+                src: "screenshots/torrent-swarm-map.png",
+                alt: "Stellar torrent swarm map",
+            },
+            {
+                src: "screenshots/torrent-peer-list.png",
+                alt: "Stellar torrent peer list",
+            },
+        ];
+
+        let currentTorrentImage = 0;
+
+        function showTorrentImage(index) {
+            currentTorrentImage = index;
+            torrentFeatureImage.src = torrentImages[currentTorrentImage].src;
+            torrentFeatureImage.alt = torrentImages[currentTorrentImage].alt;
+        }
+
+        showTorrentImage(0);
+        setInterval(() => {
+            torrentFeatureImage.classList.add("is-fading");
+            setTimeout(() => {
+                showTorrentImage((currentTorrentImage + 1) % torrentImages.length);
+                torrentFeatureImage.classList.remove("is-fading");
+            }, 120);
+        }, 5000);
+    }
+
+    const uiFeatureImage = document.getElementById("ui-feature-image");
+    if (uiFeatureImage) {
+        const uiImages = [
+            {
+                src: "screenshots/ui.png",
+                alt: "Modern cross platform UI",
+            },
+            {
+                src: "screenshots/stellar-preferences-about.png",
+                alt: "Stellar preferences about dialog",
+            },
+        ];
+
+        let currentUiImage = 0;
+
+        function showUiImage(index) {
+            currentUiImage = index;
+            uiFeatureImage.src = uiImages[currentUiImage].src;
+            uiFeatureImage.alt = uiImages[currentUiImage].alt;
+        }
+
+        showUiImage(0);
+        setInterval(() => {
+            uiFeatureImage.classList.add("is-fading");
+            setTimeout(() => {
+                showUiImage((currentUiImage + 1) % uiImages.length);
+                uiFeatureImage.classList.remove("is-fading");
+            }, 120);
+        }, 5000);
+    }
+})();

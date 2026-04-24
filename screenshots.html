@@ -29,7 +29,7 @@
     <div class="page-hero-inner">
         <h1>Screenshots</h1>
         <p>
-            Browse the current Stellar UI gallery.
+            Browse every screenshot currently stored in the site gallery.
         </p>
     </div>
 </section>
@@ -46,6 +46,7 @@
             &#8594;
         </button>
     </div>
+    <div class="gallery-grid" id="gallery-grid" aria-label="All screenshots"></div>
 </section>
 
 <footer>
@@ -63,16 +64,23 @@
 
 <script>
 const screenshots = [
+    "http-download.png",
+    "batch-download.png",
     "grabber.png",
-    "magnet.png",
+    "http-file-properties.png",
+    "magnet-link.png",
     "main-window.png",
     "new_download.png",
-    "piece map.png",
-    "progress-dialog.png",
     "scheduler.png",
     "search.png",
+    "stellar-preferences-about.png",
+    "stellar-preferences.png",
+    "torrent-peer-list.png",
+    "torrent-piece-map.png",
+    "torrent-properties.png",
+    "torrent-swarm-map.png",
     "ui.png",
-    "video-picker.png"
+    "ytdlp-dialog.png"
 ];
 
 let currentScreenshot = 0;
@@ -80,11 +88,30 @@ let currentScreenshot = 0;
 const galleryImage = document.getElementById("gallery-image");
 const galleryPrev = document.getElementById("gallery-prev");
 const galleryNext = document.getElementById("gallery-next");
+const galleryGrid = document.getElementById("gallery-grid");
 
 function renderScreenshot() {
     const fileName = screenshots[currentScreenshot];
     galleryImage.src = `screenshots/${fileName}`;
     galleryImage.alt = `Stellar screenshot: ${fileName}`;
+}
+
+function renderGalleryGrid() {
+    galleryGrid.innerHTML = screenshots
+        .map((fileName, index) => `
+            <button class="gallery-thumb" type="button" data-index="${index}" aria-label="Open ${fileName}">
+                <img src="screenshots/${fileName}" alt="${fileName}">
+                <span>${fileName}</span>
+            </button>
+        `)
+        .join("");
+
+    galleryGrid.querySelectorAll(".gallery-thumb").forEach((button) => {
+        button.addEventListener("click", () => {
+            currentScreenshot = Number(button.dataset.index);
+            renderScreenshot();
+        });
+    });
 }
 
 galleryPrev.addEventListener("click", () => {
@@ -106,6 +133,7 @@ document.addEventListener("keydown", (event) => {
     }
 });
 
+renderGalleryGrid();
 renderScreenshot();
 </script>
 </body>

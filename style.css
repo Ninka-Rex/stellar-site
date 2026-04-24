@@ -281,7 +281,7 @@ nav {
     font-size: 0.9rem;
     color: var(--text-dim);
     line-height: 1.65;
-    max-width: 44ch;
+    max-width: 67ch;
 }
 
 .feature-text p {
@@ -312,6 +312,11 @@ nav {
     height: 100%;
     object-fit: contain;
     margin: 0;
+    transition: opacity 0.12s ease;
+}
+
+.feature-img img.is-fading {
+    opacity: 0;
 }
 
 .feature-inner:not(.flip) .feature-img {
@@ -467,6 +472,43 @@ nav {
     align-items: center;
 }
 
+.gallery-grid {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.85rem;
+}
+
+.gallery-thumb {
+    border: none;
+    background: transparent;
+    color: var(--text-dim);
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+}
+
+.gallery-thumb:hover,
+.gallery-thumb:focus-visible {
+    color: var(--text);
+}
+
+.gallery-thumb img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border: none;
+    margin-bottom: 0.35rem;
+}
+
+.gallery-thumb span {
+    display: block;
+    font-family: monospace;
+    font-size: 0.72rem;
+    word-break: break-word;
+}
+
 .gallery-stage {
     min-height: 620px;
     display: flex;
@@ -537,6 +579,10 @@ footer {
 
     .gallery-stage img {
         max-height: 380px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     }
 
     .gallery-nav {
