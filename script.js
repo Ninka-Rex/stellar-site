@@ -87,11 +87,7 @@
 
         showTorrentImage(0);
         setInterval(() => {
-            torrentFeatureImage.classList.add("is-fading");
-            setTimeout(() => {
-                showTorrentImage((currentTorrentImage + 1) % torrentImages.length);
-                torrentFeatureImage.classList.remove("is-fading");
-            }, 120);
+            showTorrentImage((currentTorrentImage + 1) % torrentImages.length);
         }, 5000);
     }
 
@@ -118,11 +114,7 @@
 
         showUiImage(0);
         setInterval(() => {
-            uiFeatureImage.classList.add("is-fading");
-            setTimeout(() => {
-                showUiImage((currentUiImage + 1) % uiImages.length);
-                uiFeatureImage.classList.remove("is-fading");
-            }, 120);
+            showUiImage((currentUiImage + 1) % uiImages.length);
         }, 5000);
     }
 })();
