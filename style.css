@@ -6,13 +6,13 @@
 
 :root {
     /* Primary */
-    --stripe-purple:  #533afd;
-    --stripe-purple-hover: #4434d4;
-    --stripe-purple-deep: #2e2b8c;
-    --stripe-purple-light: #b9b9f9;
-    --stripe-purple-mid: #665efd;
+    --stripe-purple:  #3391c5;
+    --stripe-purple-hover: #1c638a;
+    --stripe-purple-deep: #391e50;
+    --stripe-purple-light: #4e2f69;
+    --stripe-purple-mid: #45285f;
     --deep-navy:      #061b31;
-    --brand-dark:     #1c1e54;
+    --brand-dark:     #4e2f69;
     --dark-navy:      #0d253d;
     --white:          #ffffff;
 
@@ -29,7 +29,7 @@
 
     /* Surface & borders */
     --border-default: #e5edf5;
-    --border-purple:  #b9b9f9;
+    --border-purple:  #3391c5;
     --border-soft-purple: #d6d9fc;
 
     /* Shadows */
