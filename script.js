@@ -25,6 +25,12 @@
         });
     }
 
+    function setPackageName(type, name) {
+        document.querySelectorAll(`[data-release-package="${type}"]`).forEach((node) => {
+            node.textContent = name;
+        });
+    }
+
     async function loadReleaseAssets() {
         try {
             const response = await fetch(apiUrl, {
@@ -41,12 +47,14 @@
 
             if (windowsAsset) {
                 setLink("windows", windowsAsset.browser_download_url, `Download ${windowsAsset.name}`);
+                setPackageName("windows", windowsAsset.name);
             } else {
                 setLink("windows", releasePage, "View latest release");
             }
 
             if (linuxAsset) {
                 setLink("linux", linuxAsset.browser_download_url, `Download ${linuxAsset.name}`);
+                setPackageName("linux", linuxAsset.name);
             } else {
                 setLink("linux", releasePage, "View latest release");
             }

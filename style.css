@@ -201,6 +201,22 @@ nav {
     margin-bottom: 1.5rem;
 }
 
+.hero-links {
+    font-size: 0.8125rem;
+    font-weight: 400;
+    font-feature-settings: "ss01";
+    color: rgba(255,255,255,0.5);
+    margin: 0 0 0.6rem;
+}
+
+.hero-links a {
+    color: var(--stripe-purple);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.hero-links a:hover { color: var(--stripe-purple-hover); }
+
 .hero-meta {
     font-size: 0.8125rem;
     font-weight: 400;
