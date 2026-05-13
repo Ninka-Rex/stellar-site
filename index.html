@@ -69,7 +69,7 @@
         <a href="https://addons.mozilla.org/firefox/downloads/file/4778694/533b75163b7b4c2e902d-0.1.7.xpi">Firefox</a>
     </p>
     <p class="hero-meta hero-platforms">
-        Windows 10/11 | Debian .deb | GPL-3.0 |
+        Windows 10/11 | Linux .deb / .rpm | GPL-3.0 |
         <a href="https://github.com/Ninka-Rex/Stellar/releases/latest">Latest release &rarr;</a>
     </p>
 </section>
@@ -187,14 +187,11 @@
         <div class="feature-text">
             <h2>Built for Linux</h2>
             <p>
-                Imagine charging $25 for a download manager, bragging about speed for twenty years, and still being too lazy to ship a Linux build. Couldn't be me.
-            </p>
-            <p>
-                (it's really not that hard guys)
+                Ships as a native <code>.deb</code> for Debian, Ubuntu, Mint, and KDE Neon, and an <code>.rpm</code> for Fedora, openSUSE, and RHEL-based distros.
             </p>
         </div>
         <div class="feature-img">
-            <img src="screenshots/linux.png" alt="Stellar on Linux">
+            <img src="screenshots/stellar-preferences-about.png" alt="Stellar on Linux">
         </div>
     </div>
 </div>
@@ -244,11 +241,26 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Linux <span class="tag">x64</span></td>
+                    <td>Linux <span class="tag">x64</span> <span class="tag">.deb</span></td>
                     <td><code data-release-package="linux">Stellar.deb</code></td>
-                    <td>Debian Linux package for Ubuntu, Linux Mint, Debian, KDE Neon, etc.</td>
+                    <td>Debian, Ubuntu, Linux Mint, KDE Neon</td>
                     <td>
                         <a class="btn btn-secondary btn-with-icon" data-release-link="linux" href="https://github.com/Ninka-Rex/Stellar/releases/latest">
+                            <span class="btn-icon" aria-hidden="true">
+                                <svg viewBox="0 0 16 16" role="img" focusable="false" aria-hidden="true">
+                                    <path d="M8 0a8 8 0 1 0 8 8A8 8 0 0 0 8 0Zm3.9 4.7c-.2 1.2-1 1.7-1.5 2.5-.4.7-.5 1.7-.2 2.5.2.6.7 1.1 1.2 1.5-.7.6-1.6 1-2.6 1-.9 0-1.7-.3-2.4-.8-.8-.6-1.2-1.6-1.1-2.6.1-1 .7-1.8 1.4-2.4.8-.7 1.9-1 2.9-1 .8 0 1.7.2 2.3.3Z"></path>
+                                </svg>
+                            </span>
+                            Download
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Linux <span class="tag">x64</span> <span class="tag">.rpm</span></td>
+                    <td><code data-release-package="linux-rpm">Stellar.rpm</code></td>
+                    <td>Fedora, openSUSE, RHEL, AlmaLinux, Rocky Linux</td>
+                    <td>
+                        <a class="btn btn-secondary btn-with-icon" data-release-link="linux-rpm" href="https://github.com/Ninka-Rex/Stellar/releases/latest">
                             <span class="btn-icon" aria-hidden="true">
                                 <svg viewBox="0 0 16 16" role="img" focusable="false" aria-hidden="true">
                                     <path d="M8 0a8 8 0 1 0 8 8A8 8 0 0 0 8 0Zm3.9 4.7c-.2 1.2-1 1.7-1.5 2.5-.4.7-.5 1.7-.2 2.5.2.6.7 1.1 1.2 1.5-.7.6-1.6 1-2.6 1-.9 0-1.7-.3-2.4-.8-.8-.6-1.2-1.6-1.1-2.6.1-1 .7-1.8 1.4-2.4.8-.7 1.9-1 2.9-1 .8 0 1.7.2 2.3.3Z"></path>
