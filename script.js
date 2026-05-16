@@ -12,6 +12,9 @@
         linux: [
             /\.deb$/i,
         ],
+        "linux-rpm": [
+            /\.rpm$/i,
+        ],
     };
 
     function pickAsset(assets, rules) {
@@ -44,6 +47,7 @@
 
             const windowsAsset = pickAsset(assets, targets.windows);
             const linuxAsset = pickAsset(assets, targets.linux);
+            const linuxRpmAsset = pickAsset(assets, targets["linux-rpm"]);
 
             if (windowsAsset) {
                 setLink("windows", windowsAsset.browser_download_url, `Download ${windowsAsset.name}`);
@@ -58,9 +62,17 @@
             } else {
                 setLink("linux", releasePage, "View latest release");
             }
+
+            if (linuxRpmAsset) {
+                setLink("linux-rpm", linuxRpmAsset.browser_download_url, `Download ${linuxRpmAsset.name}`);
+                setPackageName("linux-rpm", linuxRpmAsset.name);
+            } else {
+                setLink("linux-rpm", releasePage, "View latest release");
+            }
         } catch (error) {
             setLink("windows", releasePage, "View latest release");
             setLink("linux", releasePage, "View latest release");
+            setLink("linux-rpm", releasePage, "View latest release");
         }
     }
 
