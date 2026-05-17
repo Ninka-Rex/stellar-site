@@ -525,6 +525,12 @@ nav {
     color: var(--success-text);
 }
 
+.tag-orange {
+    background: rgba(255,149,0,0.12);
+    border-color: rgba(255,149,0,0.35);
+    color: #ffa930;
+}
+
 /* ── Gallery / screenshots page ──────────────────────────────── */
 
 .page-hero {

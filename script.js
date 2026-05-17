@@ -15,6 +15,9 @@
         "linux-rpm": [
             /\.rpm$/i,
         ],
+        firefox: [
+            /\.xpi$/i,
+        ],
     };
 
     function pickAsset(assets, rules) {
@@ -69,10 +72,17 @@
             } else {
                 setLink("linux-rpm", releasePage, "View latest release");
             }
+
+            const firefoxAsset = pickAsset(assets, targets.firefox);
+            if (firefoxAsset) {
+                setLink("firefox", firefoxAsset.browser_download_url, `Download ${firefoxAsset.name}`);
+                setPackageName("firefox", firefoxAsset.name);
+            }
         } catch (error) {
             setLink("windows", releasePage, "View latest release");
             setLink("linux", releasePage, "View latest release");
             setLink("linux-rpm", releasePage, "View latest release");
+            setLink("firefox", releasePage, "View latest release");
         }
     }
 
