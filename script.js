@@ -129,8 +129,8 @@
                 alt: "Modern cross platform UI",
             },
             {
-                src: "screenshots/stellar-preferences-about.png",
-                alt: "Stellar preferences about dialog",
+                src: "screenshots/ui-light.png",
+                alt: "Modern cross platform UI (light theme)",
             },
         ];
 
