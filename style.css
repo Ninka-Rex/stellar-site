@@ -400,6 +400,14 @@ nav {
 .feature-inner:not(.flip) .feature-img { justify-content: flex-start; }
 .feature-inner.flip .feature-img { justify-content: flex-end; }
 
+/* Lock slideshow image dimensions so swapping a frame with a slightly
+   different intrinsic size doesn't reflow the rest of the row. */
+.feature-img img#ui-feature-image,
+.feature-img img#torrent-feature-image {
+    aspect-ratio: 1413 / 561;
+    height: auto;
+}
+
 .feature-img-placeholder {
     width: 100%;
     height: 100%;
