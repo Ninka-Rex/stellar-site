@@ -184,7 +184,7 @@ nav {
     width: 100%;
     max-width: 800px;
     height: auto;
-    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.1);
     box-shadow: rgba(0,0,0,0.55) 0px 24px 48px -12px;
 }
 
@@ -347,7 +347,8 @@ nav {
 
 .feature-inner:not(.flip) .feature-text {
     text-align: left;
-    padding: 2rem 2.5rem 2rem clamp(1.5rem, calc((100vw - 1400px) / 2 + 3rem), 6rem);
+    justify-self: end;
+    padding: 2rem 2.5rem 2rem 1.5rem;
 }
 
 .feature-inner.flip .feature-text {
@@ -386,7 +387,7 @@ nav {
     width: 100%;
     height: auto;
     margin: 0;
-    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.1);
     box-shadow: rgba(0,0,0,0.55) 0px 24px 48px -12px;
 }
 
@@ -645,9 +646,12 @@ nav {
     width: 100%;
     aspect-ratio: 16 / 10;
     object-fit: cover;
-    border: none;
+    border: 1px solid rgba(255,255,255,0.1);
     margin-bottom: 0;
 }
+
+.gallery-thumb.is-active img { border-color: var(--stripe-purple); }
+.gallery-thumb.is-active span { color: rgba(255,255,255,0.85); }
 
 .gallery-thumb span {
     display: block;
@@ -678,7 +682,7 @@ nav {
     max-width: 100%;
     max-height: 560px;
     object-fit: contain;
-    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .gallery-nav {
@@ -689,7 +693,7 @@ nav {
     color: rgba(255,255,255,0.7);
     font-size: 1.4rem;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 0;
     transition: border-color 0.12s, box-shadow 0.12s, color 0.12s;
 }
 
@@ -759,6 +763,7 @@ footer {
     .feature-inner:not(.flip) .feature-text,
     .feature-inner.flip .feature-text {
         text-align: left;
+        justify-self: stretch;
         padding: 0 1.5rem 0 1.5rem;
     }
 
