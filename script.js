@@ -3,6 +3,7 @@
     const repo = "Stellar";
     const releasePage = `https://github.com/${owner}/${repo}/releases/latest`;
     const apiUrl = `https://api.github.com/repos/${owner}/${repo}/releases/latest`;
+    const updateUrl = `https://raw.githubusercontent.com/${owner}/${repo}/refs/heads/master/update.json`;
 
     const targets = {
         windows: [
@@ -15,9 +16,6 @@
         "linux-rpm": [
             /\.rpm$/i,
         ],
-        firefox: [
-            /\.xpi$/i,
-        ],
     };
 
     function pickAsset(assets, rules) {
@@ -27,7 +25,7 @@
     function setLink(type, url, label) {
         document.querySelectorAll(`[data-release-link="${type}"]`).forEach((link) => {
             link.href = url;
-            if (label) link.textContent = label;
+            if (label && !link.hasAttribute("data-release-keep-label")) link.textContent = label;
         });
     }
 
@@ -73,20 +71,35 @@
                 setLink("linux-rpm", releasePage, "View latest release");
             }
 
-            const firefoxAsset = pickAsset(assets, targets.firefox);
-            if (firefoxAsset) {
-                setLink("firefox", firefoxAsset.browser_download_url, `Download ${firefoxAsset.name}`);
-                setPackageName("firefox", firefoxAsset.name);
-            }
         } catch (error) {
             setLink("windows", releasePage, "View latest release");
             setLink("linux", releasePage, "View latest release");
             setLink("linux-rpm", releasePage, "View latest release");
+        }
+    }
+
+    async function loadFirefoxExtension() {
+        try {
+            const response = await fetch(updateUrl, {
+                headers: { Accept: "application/json" },
+            });
+
+            if (!response.ok) throw new Error(`update.json returned ${response.status}`);
+
+            const update = await response.json();
+            const url = update.firefoxExtensionUrl;
+            if (!url) throw new Error("firefoxExtensionUrl missing");
+
+            const name = url.split("/").pop();
+            setLink("firefox", url, `Download ${name}`);
+            setPackageName("firefox", name);
+        } catch (error) {
             setLink("firefox", releasePage, "View latest release");
         }
     }
 
     loadReleaseAssets();
+    loadFirefoxExtension();
 })();
 
 (() => {
